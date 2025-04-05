@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataViz Basic</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="upload">
+            <h2>📊 DataViz Basic</h2>
+
+            <input type="file" id="fileInput" accept=".csv, .json" />
+
+            <div class="control-group">
+                <label for="xSelect">X-axis:</label>
+                <select id="xSelect"></select>
+
+                <label for="ySelect">Y-axis:</label>
+                <select id="ySelect"></select>
+
+                <button id="suggestBtn">Suggest Chart</button>
+                <button id="plotBtn">Plot Chart</button>
+            </div>
+        </div>
+        <p id="suggestionText"></p>
+        <div class="filter-section">
+            <h3>🔍 Apply Filter</h3>
+            <label for="filterColumn">Filter Column:</label>
+            <select id="filterColumn"></select>
+
+            <label for="filterValue">Value:</label>
+            <input type="text" id="filterValue" placeholder="Enter filter value" />
+
+            <button  id="applyFilterBtn">Apply Filter</button>
+            <button id="resetFilterBtn">Reset</button>
+        </div>
+        <h3 id="filteredTitle" style="display: none;">📂 Filtered Data View</h3>
+        <canvas id="chartCanvas"></canvas>       
+
+        <div id="tableContainer"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

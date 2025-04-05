@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+  }
+  
+  .container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .upload, .filter-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .control-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  input[type="file"], select, input[type="text"] {
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+    min-width: 180px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #suggestionText {
+    font-style: italic;
+    padding-left: 10px;
+    color: #333;
+    transition: opacity 0.4s ease;
+  }
+  
+  canvas {
+    margin-top: 20px;
+    max-width: 100%;
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.5s ease;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  #filteredTitle {
+    font-weight: bold;
+    margin-top: 2rem;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .control-group,
+    .upload,
+    .filter-section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    input, select, button {
+      width: 100%;
+    }
+  
+    #chartCanvas {
+      min-height: 300px;
+    }
+  }
+  
+  /* ✨ Smooth appearance for new charts or tables */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
