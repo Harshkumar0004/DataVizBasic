@@ -86,4 +86,4 @@ Powered by Chart.js
 
 * Dark mode
 
-Mobile optimization
+* Mobile optimization
